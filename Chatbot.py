@@ -51,7 +51,10 @@ class BotSonolento(Bot):
 
     def executa_comando(self,cmd):
         pass
-
+    
+    def sentimento(self):
+        return ('Estou bastante cansado para um robo, o que é muito estranho')
+    
     def boas_vindas(self):
         return ("Olá, eu sou o {}, e estou com bastante sono, então tenha calma".format(self.__nome))
 
