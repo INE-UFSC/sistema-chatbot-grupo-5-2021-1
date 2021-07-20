@@ -6,12 +6,12 @@ class BotSonolento(Bot):
         self.__dict_comandos = {1: 'Bom dia',
                                 2: 'Qual seu nome? ',
                                 3: 'Como está se sentindo? ',
-        4: 'Até mais'}
+                                4: 'Até mais'}
 
     def apresentacao(self):
-        return ("Eu sou o Soneca, e devo admitir que estou sonhando com uma soneca")
-
-
+        return "Eu sou o {}, e devo admitir que estou sonhando com uma soneca".format(self.__nome)
+    
+    @property
     def nome(self):
         return self.__nome
 
@@ -19,10 +19,20 @@ class BotSonolento(Bot):
         return self.__dict_comandos
 
     def executa_comando(self,cmd):
-        pass
+        chave = cmd
+        if chave == 1:
+            return "Uaaah... Bom dia, que vontade de voltar a dormir"
+        elif chave == 2:
+            return "Meu nome? Estou com tanto sono para lembrar... Ah! É {}".format(self.__nome)
+        elif chave == 3:
+            return "Cansado, com muita vontade de ir dormir"
+        elif chave == 4:
+            return "Até, vou voltar a dormir"
+        else:
+            return "Comando não existente!"
 
     def boas_vindas(self):
-        return ("Olá, eu sou o {}, e estou com bastante sono, então tenha calma".format(self.__nome))
+        return "Olá, eu sou o {}, e estou com bastante sono, então tenha calma".format(self.__nome)
 
     def despedida(self):
-        return ("Até mais! Vou aproveitar para dormir ")
+        return "Até mais! Vou aproveitar para dormir"
