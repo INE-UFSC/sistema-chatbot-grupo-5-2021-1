@@ -7,15 +7,23 @@ class BotCuriosidade(Bot):
                                 2: 'Qual seu nome',
                                 3: 'Conte-me uma curiosidade',
                                 4: 'Adeus'}
+    def apresentacao(self):
+        return ("Eu sou o Curioso e estou aqui para lhe contar coisas que eu dúvido que você saiba")
+        
     def nome(self):
         return self.__nome
+        
     def mostra_comandos(self):
         return self.__dict_comandos
     def executa_comando(self, cmd):
         pass
+        
     def curiosidade(self):
         return ("Até hoje, o voo mais longo de uma galinha durou 13 segundos")
+        
     def boas_vindas(self):
         return ("Olá! Eu sou um bot muito curioso")
+        
     def despedida(self):
         return ('Tchau! Continue buscando conhecimento')
+
