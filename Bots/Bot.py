@@ -19,7 +19,7 @@ class Bot(ABC):
     
     @property
     def mostra_comandos(self):
-        self.__comandos
+        return self.__comandos
 
     @abstractmethod
     def executa_comando(self,cmd):
