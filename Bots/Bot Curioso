@@ -7,23 +7,32 @@ class BotCuriosidade(Bot):
                                 2: 'Qual seu nome',
                                 3: 'Conte-me uma curiosidade',
                                 4: 'Adeus'}
+
     def apresentacao(self):
-        return ("Eu sou o Curioso e estou aqui para lhe contar coisas que eu dúvido que você saiba")
+        return "Eu sou o Curioso e estou aqui para lhe contar coisas que eu dúvido que você saiba"
         
+    @property
     def nome(self):
         return self.__nome
         
     def mostra_comandos(self):
         return self.__dict_comandos
+
     def executa_comando(self, cmd):
-        pass
-        
-    def curiosidade(self):
-        return ("Até hoje, o voo mais longo de uma galinha durou 13 segundos")
+        chave = cmd
+        if chave == 1:
+            return "Bom dia! Hoje é um ótimo dia para aprender algo novo, não?"
+        elif chave == 2:
+            return "Curiosa essa pergunta... Que tal você tentar adivinhar?"
+        elif chave == 3:
+            return "Até hoje, o voo mais longo de uma galinha durou 13 segundos"
+        elif chave == 4:
+            return "Até mais, vou ir aprender coisas novas"
+        else:
+            return "Comando não existente!"
         
     def boas_vindas(self):
-        return ("Olá! Eu sou um bot muito curioso")
+        return "Olá! Eu sou um bot muito curioso"
         
     def despedida(self):
-        return ('Tchau! Continue buscando conhecimento')
-
+        return "Tchau! Continue buscando conhecimento"
