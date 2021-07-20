@@ -1,4 +1,4 @@
-from Bots.Bot import Bot
+from Bots.Bot import *
 
 parar = False
 
